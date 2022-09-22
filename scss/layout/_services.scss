@@ -1,0 +1,57 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.services {
+	display: grid;
+	grid-template-areas:
+		' header header header header'
+		' main main main main'
+		' main main main main'
+		' main  main main main';
+
+	.header {
+		grid-area: header;
+	}
+
+	.mesa-de-trabajo {
+		grid-area: main;
+	}
+
+	@include m.movil {
+		grid-template-areas:
+			' blanck header header header'
+			' main main main main'
+			' main main main main'
+			' main  main main main';
+	}
+}
+
+.mesa-de-trabajo {
+	width: 100%;
+	height: 90vh;
+	padding: 50rem;
+	background-image: url('../img/mesa-de-trabajo.webp');
+	background-repeat: no-repeat;
+
+	background-position: 50%;
+
+	display: flex;
+	align-items: center;
+
+	@include m.desktop {
+		@include m.movil {
+			background-size: cover;
+			align-items: inherit;
+		}
+	}
+}
+
+.bets-version {
+	@include m.movil {
+		width: 670rem;
+
+		p {
+			font-size: 32rem;
+		}
+	}
+}

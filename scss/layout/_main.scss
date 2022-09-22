@@ -1,0 +1,14 @@
+@use 'base/mixins' as m;
+
+.main {
+	section {
+		margin-bottom: 50rem;
+	}
+
+	@include m.movil {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 50rem;
+	}
+}

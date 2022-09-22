@@ -1,0 +1,65 @@
+@use 'variables' as v;
+
+html {
+	font-size: 6.25%; /*  1rem = 1px */
+	box-sizing: border-box; /*box mnodel*/
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit; /*box mnodel*/
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16rem;
+	font-family: v.$fuente_principal;
+	background-color: v.$fondo;
+	display: flex;
+	justify-content: center;
+	color: v.$blanco;
+}
+
+h1,
+h2,
+h3 {
+	color: v.$verde;
+	font-family: v.$fuente_principal;
+}
+
+h1 {
+	font-size: 40rem;
+}
+
+h2 {
+	font-size: 36rem;
+}
+
+h3 {
+	font-size: 30rem;
+}
+
+p {
+	font-size: 20rem;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: v.$blanco;
+}
+
+.contenedor {
+	width: 90%;
+}
